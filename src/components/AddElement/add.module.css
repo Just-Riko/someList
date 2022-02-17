@@ -1,0 +1,7 @@
+.block{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.button{
+    font-size: 20px;
+}
