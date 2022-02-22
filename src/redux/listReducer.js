@@ -46,7 +46,7 @@ let ell
 let listReducer = (state = initialState, action) => {
     switch (action.type) {
         case addComment:
-            let newComent = comentModel(Math.random(), action.pageId, action.text, 'no date, I want to sleep(')
+            let newComent = comentModel(Math.random(), action.pageId, action.text || 'empty comment', 'no date, I want to sleep(')
             ell = state.elements.map(i => {
                 if (i.id == action.pageId){
                     i.comments.push(newComent)
