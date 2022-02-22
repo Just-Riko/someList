@@ -10,7 +10,7 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = {
     deleteAction,
-    setElementsAction
+    setElementsAction,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(List)

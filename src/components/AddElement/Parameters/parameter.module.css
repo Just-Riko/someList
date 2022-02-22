@@ -1,0 +1,13 @@
+.span{
+    padding-right: 50px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.input{
+    width: 180px;
+}
+li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5px;
+}

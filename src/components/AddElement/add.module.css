@@ -1,7 +1,76 @@
+.body{
+    background-color: black;
+    opacity: 80%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 .block{
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-.button{
+.addElement{
+    margin: 10px 10px;
     font-size: 20px;
+}
+.modal{
+    color: white;
+    width: 315px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.list{
+    padding: 0;
+    margin: 0;
+}
+.bodyBlock{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+.header{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+}
+.header span{
+    font-weight: 700;
+    cursor: pointer;
+    text-align: end;
+}
+.buttonsBlock{
+    text-align: end;
+}
+.buttonsBlock button{
+    font-size: 20px;
+}
+.warningBlock{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+.warning{
+    width: 300px;
+    height: fit-content;
+    text-align: center;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.okButton:hover{
+    cursor: pointer;
+    color: gray;
 }

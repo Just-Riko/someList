@@ -1,4 +1,4 @@
-function model(id, url, title, count, height, width, weight) {
+function model(id, url, title, count, height, width, weight, ...comments) {
     return {
         id: id,
         imageUrl: url,
@@ -9,7 +9,7 @@ function model(id, url, title, count, height, width, weight) {
             height
         },
         weight,
-        comments: ["CommentModel", "CommentModel"]
+        comments
     }
 }
 
