@@ -6,6 +6,7 @@ import {deleteComentAction, addCommentAction} from './../../redux/listReducer'
 let mapStateToProps = (state) => {
     return {
         elements: state.list.elements,
+        parameters: state.list.parameters
     }
 }
 

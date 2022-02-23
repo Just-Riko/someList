@@ -1,0 +1,8 @@
+.header{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.input input{
+    width: 90%;
+    font-size: 22px;
+}

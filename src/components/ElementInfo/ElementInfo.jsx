@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
 import s from './info.module.css'
+import ParametersConteiner from './../AddElement/Parameters/ParametersConteiner'
 
 let ElementInfo = (props) => {
 
@@ -20,22 +21,23 @@ let ElementInfo = (props) => {
     }
 
     return (
-        <div className={s.block}>
+        <div className={s.blockD}>
             <div><h1>{element.name}</h1>
-                <img src={element.imageUrl} /></div>
+                <img src={element.imageUrl} />
+            </div>
             <div>
                 <h4>some info:</h4>
                 <p>count: {element.count || 'no info'}</p>
                 <p>size: {element.size.width || 'no info'} x {element.size.height || 'no info'}</p>
                 <p>weight: {element.weight || 'no info'}</p>
                 <h3>Coment Section:</h3>
-                <div style={{width: 'fit-content'}}>{element.comments ? element.comments.map(i => <div key={i.id} style={{ border: '1px solid black', borderRadius: '10px', marginBottom: '10px', padding: '5px', fontFamily: "sans-serif" }}>
+                <div style={{ width: 'fit-content' }}>{element.comments ? element.comments.map(i => <div key={i.id} style={{ border: '1px solid black', borderRadius: '10px', marginBottom: '10px', padding: '5px', fontFamily: "sans-serif" }}>
                     <p>{i.description}</p>
                     <div>{i.date}</div>
                     <button onClick={() => props.deleteComentAction(i.id, +location.join(''))}>delete</button>
                 </div>) : 'no comments'}
-                <input value={input} onChange={onInputChange}></input>
-                <button onClick={add} style={{display: 'block', margin: '0 auto', fontSize: '20px'}}>+</button>
+                    <input value={input} onChange={onInputChange}></input>
+                    <button onClick={add} style={{ display: 'block', margin: '0 auto', fontSize: '20px' }}>+</button>
                 </div>
 
             </div>
