@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import List from "./list";
-import { deleteAction, setElementsAction } from '../../redux/listReducer'
+import { deleteAction, setElementsAction, sortAction } from '../../redux/listReducer'
 
 let mapStateToProps = (state) => {
     return {
@@ -10,7 +10,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = {
     deleteAction,
-    setElementsAction
+    setElementsAction,
+    sortAction
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(List)
