@@ -8,9 +8,15 @@ let Element = (props) => {
 
     return (
         <div className={s.block}>
-            <NavLink to={`/${props.info.id}`} className={s.link}><img src={props.info.imageUrl} /></NavLink>
+            <NavLink to={{
+                pathname: `/${props.info.id}`,
+                hash: `${props.info.id}`
+            }} className={s.link}><img src={props.info.imageUrl} /></NavLink>
             <div>
-                <NavLink to={`/${props.info.id}`} className={s.link}><h3 className={s.h3}>{props.info.name}</h3></NavLink>
+                <NavLink to={{
+                    pathname: `/${props.info.id}`,
+                    hash: `${props.info.id}`
+                }} className={s.link}><h3 className={s.h3}>{props.info.name}</h3></NavLink>
                 <p className={s.p}>count: {props.info.count ? props.info.count : 'not available'}</p>
                 <p className={s.p}>weight: {props.info.weight ? props.info.weight : 'undefined'}</p>
                 <p className={s.p}>size: {props.info.size.width ? props.info.size.width : 'undefined'} x {props.info.size.height ? props.info.size.height : 'undefined'}</p>

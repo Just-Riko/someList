@@ -9,7 +9,8 @@ function App() {
     <BrowserRouter>
       <div className={s.wrapper}>
         <Routes>
-          <Route path='/' element={<ListConteiner />} />
+          {console.log(process.env.PUBLIC_URL)}
+          <Route path={process.env.PUBLIC_URL} element={<ListConteiner />} />
           <Route path='/*' element={<ElementInfoConteiner />} />
         </Routes>
       </div>

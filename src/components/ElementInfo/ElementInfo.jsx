@@ -1,12 +1,13 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
 import s from './info.module.css'
-import ParametersConteiner from './../AddElement/Parameters/ParametersConteiner'
 
 let ElementInfo = (props) => {
 
-    let location = useLocation().pathname.split('')
+    let location = useLocation().hash.split('')
     location.shift()
+    console.log(+location)
+    //trouble!!!!
 
     let element = props.elements.filter(i => i.id == location)[0]
 
